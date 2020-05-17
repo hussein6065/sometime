@@ -106,5 +106,17 @@ class graphStructure{
 };
 
 int main(){
+    graphStructure *covid19 = new graphStructure();
+
+    string name; 
+    int age;
+    double s_prob;
+    
+    ifstream inf("smalldo.dat");
+    
+    while(inf>>name>>age>>s_prob){
+        
+        covid19->addPersonNode(new Person(name,age,s_prob));
+    }
     
 }
