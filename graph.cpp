@@ -194,6 +194,7 @@ class Person{
 		void setStatus(Status status){
 			this->status = status;
 		}
+
 		
 		Status getStatus(){
 			return status;
@@ -237,6 +238,16 @@ class Person{
 				}					
 			}
 		}
+// 	Make it this way
+	void infect(){
+			
+		for(auto v: *connections){
+			if(simulate_prob(v->getS_Prob())){
+				v->setStatus(Status::two);
+				cout<<v->getStatus()<<endl;
+			}					
+		}
+	}
 		
 		void printConns(){
 			for(auto x:*connections){
