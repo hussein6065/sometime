@@ -369,6 +369,7 @@ class graph{
 			Person* c = adjacencyList->at(randIndex);
 			//c->print();
 			if(simulate_prob(c->getS_Prob())){
+// 				c->setStatus(Status::two);
 				c->setStatus(status = two);
 				c->infect();
 				cout<<c->getName();
