@@ -308,46 +308,46 @@ class graph{
 
 	};
 		
-int main(){
+// int main(){
     
-	ifstream file("population.dat");
-	string name, nam1, nam2;
-	int age;
-	float s_prob;
-    srand(time(NULL));
+// 	ifstream file("population.dat");
+// 	string name, nam1, nam2;
+// 	int age;
+// 	float s_prob;
+//     srand(time(NULL));
 
-	graph* covid = new graph();
+// 	graph* covid = new graph();
 
-	while(file>>name >> age >> s_prob){
-		Person p(name, age, s_prob);
-		covid->addPersonNode(new Person(name, age, s_prob));
+// 	while(file>>name >> age >> s_prob){
+// 		Person p(name, age, s_prob);
+// 		covid->addPersonNode(new Person(name, age, s_prob));
 
-	}
-	file.close();
-	// covid->printGraph();
+// 	}
+// 	file.close();
+// 	// covid->printGraph();
 
-	cout<<"----Testing Connections---"<<endl;
+// 	cout<<"----Testing Connections---"<<endl;
 
-	ifstream file2("connections.dat");
+// 	ifstream file2("connections.dat");
 
-	while(file2>>nam1>>nam2){
-		covid->addConnections(nam1, nam2);
+// 	while(file2>>nam1>>nam2){
+// 		covid->addConnections(nam1, nam2);
 
-	}
-	file.close();
+// 	}
+// 	file.close();
 
-	covid->summary();
-    covid->infectPerson();
-    for(int i = 0; i<10;i++){
-        cout<<"--------------------"<<endl;
-        covid -> updateCovidStatus();
-        cout<<"--------------------"<<endl;
-        if(i>3){
-            covid->getRecovedCase();
-        }
-    }
-    covid->summary();
+// 	covid->summary();
+//     covid->infectPerson();
+//     for(int i = 0; i<10;i++){
+//         cout<<"--------------------"<<endl;
+//         covid -> updateCovidStatus();
+//         cout<<"--------------------"<<endl;
+//         if(i>3){
+//             covid->getRecovedCase();
+//         }
+//     }
+//     covid->summary();
 
    
 
-}
+// }
